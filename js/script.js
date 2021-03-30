@@ -10,10 +10,19 @@ calculateButton.addEventListener('click', function() {
     var addCheckBox = document.getElementsByClassName('addon');
     console.log(addCheckBox);
 
+    var prezzoBaseBurger = 15 ;
+
     for ( var i=0; i < addCheckBox.length; i++ ) {
+
         var thisCheck = addCheckBox[i];
-        console.log(i, thisCheck.value)
-        console.log(i, thisCheck.checked)
+        var prezzoAsNumber = parseInt(thisCheck.value);               
+
+        if ( thisCheck.checked == true ) {
+
+            prezzoBaseBurger += prezzoAsNumber;
+            console.log(prezzoBaseBurger)
+
+        }
     }
 // estrarre il valore delle checkbox (stringa) con un ciclo FOR ;
 // convertire in numero (parseInt) per utilizzarlo nel calcolo del prezzo finale;
