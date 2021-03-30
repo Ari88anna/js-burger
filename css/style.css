@@ -44,6 +44,12 @@ img {
     vertical-align: middle;
 }
 
+#name-your-burger {
+    font-size: 20px;
+    font-weight:700;
+    
+}
+
 /* FOOTER */
 
 .footer-price {
