@@ -1,0 +1,52 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+body {
+    font-family: 'Lexend', sans-serif;
+}
+img {
+    width: 100%;
+}
+
+.inner-container {
+    width: 40%;
+    margin: auto;
+    padding: 35px 0;
+}
+
+.nolistyle {
+    list-style-type: none;
+}
+
+
+/* HEADER */
+
+
+/* MAIN */
+
+.ingedients-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ingedients-container ul {
+    list-style-type: none;
+}
+
+.img-container {
+    width: 60px;    
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* FOOTER */
+
+.footer-price {
+    display: flex;
+    justify-content: space-between;
+}
