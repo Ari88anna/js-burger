@@ -24,9 +24,22 @@ calculateButton.addEventListener('click', function() {
         }        
     }
 
-    var prezzoFinale = prezzoBaseBurger.toFixed(2);
+    var prezzoFinale = prezzoBaseBurger;
 
+    // Discount coupon. Creare un array di codici inventati, ognuno corrisponderà ad un certo sconto.
+    //conntrollare se il codice immesso dall'utente è presente nell'array (includes)
+    var discountElement = document.getElementById('discount').value;
+    console.log(discountElement)    
 
+    var discountArray = ['ab', 'cd', 'ef'];
+
+    if (discountArray.includes(discountElement)) {
+
+        prezzoFinale -= (prezzoFinale * 0.2 );
+    }
+
+    var prezzoFinaleScontato = prezzoFinale.toFixed(2);
+    
 // STAMPO
-document.getElementById('final-price').innerHTML ='$ ' + prezzoFinale;
+document.getElementById('final-price').innerHTML ='$ ' + prezzoFinaleScontato;
 });

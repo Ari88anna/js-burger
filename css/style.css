@@ -8,15 +8,22 @@
 /* COMMON */
 body {
     font-family: 'Lexend', sans-serif;
+    background-color: #fff4e2;
 }
 img {
     width: 100%;
 }
 
-.inner-container {
-    width: 40%;
+.burger-app-wrapper {
+    width: 60%;
+    height: 100vh;
     margin: auto;
-    padding: 35px 0;
+    background-color: azure;
+}
+
+.inner-container {
+    width: 90%;
+    margin: auto;    
 }
 
 .nolistyle {
@@ -25,13 +32,47 @@ img {
 
 
 /* HEADER */
+header {
+    height: 100px;
+    background-color: #fdbc41;
+    padding: 20px 0;
+}
+
+.header-img,
+header h1 {
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+.header-img {
+    width: 60px;     
+}
 
 
 /* MAIN */
+main {
+    height: calc( 100% - 180px );
+    overflow: auto;
+    padding: 20px 0;
+}
+
+#name-your-burger {
+    font-size: 20px;
+    font-weight:700;
+    background-color: #fff4e2;
+    border: 0;
+    padding: 5px 0;
+}
+
+main h3 {
+    padding: 10px 0;
+    font-weight: 600;
+}
 
 .ingedients-container {
     display: flex;
     justify-content: space-around;
+    padding: 10px 0;
 }
 
 .ingedients-container ul {
@@ -44,14 +85,46 @@ img {
     vertical-align: middle;
 }
 
-#name-your-burger {
-    font-size: 20px;
-    font-weight:700;
-    
+.ingedients-container ul li {
+    padding: 8px 0;
+}
+
+.ingedients-container ul li label {
+    padding: 0 10px;
+}
+
+.discount-input label {
+    font-size: 12px;
+}
+
+#discount {
+    background-color: #fff4e2;
+    border: 0;
+    border-radius: 5px;
+}
+
+#calculate-btn {
+    background-color: #fdbc41;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+.btn-calc {
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* FOOTER */
 
+footer {
+    height: 80px;
+    background-color: #d23359;
+    padding: 20px 0;
+}
 .footer-price {
     display: flex;
     justify-content: space-between;
