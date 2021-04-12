@@ -4,27 +4,60 @@
 
 var calculateButton = document.getElementById('calculate-btn');
 
-// quando clicchiamo sul botton calculate:    il prezzo del burger cambia
+// quando clicchiamo sul botton calculate:il prezzo del burger cambia
 calculateButton.addEventListener('click', function() {
     
-    var addCheckBox = document.getElementsByClassName('addon');
-    console.log(addCheckBox);
-// esiste già un prezzo di base che dovrà essere implementato in base al valore delle checkbox checked;
-    var prezzoBaseBurger = 15 ;
-// estrarre il valore delle checkbox (stringa) con un ciclo FOR ;
-    for ( var i=0; i < addCheckBox.length; i++ ) {
+    // var addCheckBox = document.getElementsByClassName('addon');
+    // console.log(addCheckBox);
+    // // esiste già un prezzo di base che dovrà essere implementato in base al valore delle checkbox checked;
+    // var prezzoBaseBurger = 15 ;
+    // // estrarre il valore delle checkbox (stringa) con un ciclo FOR ;
+    // for ( var i=0; i < addCheckBox.length; i++ ) {
+
+    //     var thisCheck = addCheckBox[i];
+    //     // convertire in numero (parseInt) per utilizzarlo nel calcolo del prezzo finale;
+    //     var prezzoAsNumber = parseInt(thisCheck.value);               
+
+    //     if ( thisCheck.checked == true ) {
+
+    //         prezzoBaseBurger += prezzoAsNumber;            
+    //     }        
+    // }
+
+    // var prezzoFinale = prezzoBaseBurger;
+
+    //oppure (correzione fatta in classe)
+    var burgerName = document.getElementById('name-your-burger').value;
+    if ( burgerName.length == 0) {
+
+        alert('non hai inserito il nome');
+    }else { //prendiamo il valore delle checkbox
+
+        var addCheckBox = document.getElementsByClassName('addon');
+        console.log(addCheckBox);
+
+        var prezzoBaseBurger = 15 ;
+
+        // estrarre il valore delle checkbox (stringa) con un ciclo FOR ;
+        for ( var i=0; i < addCheckBox.length; i++ ) {
 
         var thisCheck = addCheckBox[i];
         // convertire in numero (parseInt) per utilizzarlo nel calcolo del prezzo finale;
         var prezzoAsNumber = parseInt(thisCheck.value);               
 
-        if ( thisCheck.checked == true ) {
+        if ( thisCheck.checked) {
 
             prezzoBaseBurger += prezzoAsNumber;            
         }        
     }
 
     var prezzoFinale = prezzoBaseBurger;
+    }
+
+
+
+
+
 
     // Discount coupon. Creare un array di codici inventati, ognuno corrisponderà ad un certo sconto.
     //conntrollare se il codice immesso dall'utente è presente nell'array (includes)
